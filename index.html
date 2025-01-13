@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hurayracodes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<div id="loadingScreen" class="loading-screen">
+  <div class="loading-message">
+    🍕 Pizza is Loading...
+  </div>
+</div>
+<body>
+  <nav>
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </label>
+      <label class="logo">&lt;/&gt;HurayraCodes</label>
+
+      <a class="home-link" href="index.html">Home</a> <!-- link back to homepage -->
+      <a href="##ourmenu">Deals</a> 
+      <a href="#about">About us</a>
+      <a href="#contact">Contact us</a>
+      <a href="#social">Follow Us</a>
+      
+    </div>
+    <div class="add-to-cart" onclick="showCart()">
+      <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span>
+    </div>
+  </nav>
+  
+    <!-- hero section like background image with title and paragraph -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Hurayra Pizza</h1>
+            <p>Your ultimate destination for delicious and fresh pizza in Chichawatni.</p>
+            <button><a href="#ourmenu"></a> Order Now</button>
+        </div>
+    </div>
+    <!-- Menu Section -->
+  <div class="menu-section" id="ourmenu">
+    <h1 class="menu-heading">Deals</h1>
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="pz1 (2).jpg" class="menu-image" alt="Chicken Tikka Pizza">
+        <h2>Chicken Tikka Pizza</h2>
+        <p>Perfect for family gatherings<br>
+          <span>Price: 100RS</span>
+        </p>
+        <button onclick="cartorder('Chicken Tikka Pizza', 100)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="pz1 (1).jpg" class="menu-image" alt="Chicken Fajita Pizza">
+        <h2>Chicken Fajita Pizza</h2>
+        <p>Spice up your pizza cravings<br>
+          <span>Price: 150RS</span>
+        </p>
+        <button onclick="cartorder('Chicken Fajita Pizza', 150)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="pz1 (3).jpg" class="menu-image" alt="BBQ Pizza">
+        <h2>BBQ Pizza</h2>
+        <p>Flavors that melt in your mouth<br>
+          <span>Price: 200RS</span>
+        </p>
+        <button onclick="cartorder('BBQ Pizza', 200)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+    
+
+      <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Welcome to <strong>Hurayra Pizza</strong>, where passion meets perfection in every slice. Located in the heart of Chichawatni, we take pride in crafting the most delicious pizzas using only the freshest ingredients. Our commitment to quality and taste has made us the go-to destination for pizza lovers in the area.</p>
+      <br><p>Whether you're craving a classic Margherita or one of our signature specialties, we guarantee a memorable dining experience that will keep you coming back for more.</p>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p id="Hurayrapizza">
+      <strong>Hurayra Pizza</strong><br>
+      Serving the best pizza in Chichawatni since 2024.
+    </p>
+          <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <h2 class="contact-title">Contact Us</h2>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <p>03166732581</p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-regular fa-envelope"></i>
+          <p>abuhurayra3912l@gmail.com</p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Chichawatni Pizza, Bypass Near Punjab College</p>
+        </div>
+      </section>
+    
+      <div class="quicklinks">
+        <h2 class="contact-title">QuickLinks</h2>
+        <ol>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </div>
+      
+
+      <div class="container-social" id="social">
+        <p>Follow Us</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/hurayracodes" target="_blank">
+            <i class="fa-brands fa-facebook"></i> 
+          </a>
+
+          <a href="https://instagram.com/hurayracodes" target="_blank">
+            <i class="fa-brands fa-instagram"></i> 
+          </a>
+          <a href="https://linkedin.com/in/hurayracodes" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> 
+          </a>
+        </div>
+      </div>
+      
+  </footer>
+  <div id="copyright">
+    <p id="year">© 2025 Hurayra Pizza. All Rights Reserved.</p>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+</html>   
+ 
+ 
